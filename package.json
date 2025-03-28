@@ -1,0 +1,49 @@
+{
+  "name": "player-modules-lessons-zustand",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "server": "json-server server.json",
+    "build": "tsc -b && vite build",
+    "clean": "rm -rf node_modules/ dist/ build/ package-lock.json yarn.lock && yarn && yarn dev",
+    "check": "NPM_CHECK_INSTALLER=yarn npm-check -u",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-collapsible": "1.1.3",
+    "@reduxjs/toolkit": "2.6.1",
+    "@tailwindcss/vite": "^4.0.17",
+    "axios": "1.8.4",
+    "lucide-react": "^0.485.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-player": "2.16.0",
+    "react-redux": "9.2.0",
+    "tailwind-merge": "3.0.2",
+    "tailwind-scrollbar": "4.0.1",
+    "tailwindcss": "^4.0.17",
+    "zustand": "5.0.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.23.0",
+    "@types/node": "^22.13.14",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
+    "@vitejs/plugin-react": "4.3.4",
+    "eslint": "9.23.0",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.19",
+    "eslint-plugin-simple-import-sort": "12.1.1",
+    "globals": "16.0.0",
+    "json-server": "1.0.0-beta.3",
+    "typescript": "5.8.2",
+    "typescript-eslint": "^8.28.0",
+    "vite": "^6.2.3",
+    "vitest": "3.0.9"
+  }
+}

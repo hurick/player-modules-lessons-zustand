@@ -1,0 +1,50 @@
+{
+  "courses": {
+    "modules": [
+      {
+        "id": "1",
+        "title": "Getting to know JavaScript",
+        "lessons": [
+          { "id": "Ptbk2af68e8", "title": "What is JavaScript capable of doing?", "duration": "28:50" },
+          { "id": "rUTKomc2gG8", "title": "How did we get here?", "duration": "24:47" },
+          { "id": "FdePtO5JSd0", "title": "Getting Started", "duration": "32:52" },
+          { "id": "OmmJBfcMJA8", "title": "Creating Your First Script", "duration": "24:15" }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Basic JavaScript Commands",
+        "lessons": [
+          { "id": "Vbabsye7mWo", "title": "Variables and Primitive Types", "duration": "31:41" },
+          { "id": "OJgu_KCCUSY", "title": "Data Handling", "duration": "39:16" },
+          { "id": "hZG9ODUdxHo", "title": "Operators (PT. 1)", "duration": "25:31" },
+          { "id": "BP63NhITvao", "title": "Operators (PT. 2)", "duration": "24:26" }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Document Object Model",
+        "lessons": [
+          { "id": "hZG9ODUdxHo", "title": "Introduction to DOM", "duration": "28:05" },
+          { "id": "wWnBB-mZIvY", "title": "DOM Events", "duration": "28:54" }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Conditions in JavaScript",
+        "lessons": [
+          { "id": "cOdG4eACN2A", "title": "Conditions (PT. 1)", "duration": "27:30" },
+          { "id": "EEStcIe8rAM", "title": "Conditions (PT. 2)", "duration": "29:20" }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Loops in JavaScript",
+        "lessons": [
+          { "id": "5rZqYPKIwkY", "title": "Loops (PT. 1)", "duration": "20:06" },
+          { "id": "eX-lkN_Zahc", "title": "Loops (PT. 2)", "duration": "19:57" }
+        ]
+      }
+    ]
+  }
+}
