@@ -2,7 +2,7 @@
 
 A React application demonstrating state management using Zustand, featuring a video player with modules and lessons.
 
-![Application Demo](public/images/app-demo.png)
+![Application Demo](./public/images/app-demo.png)
 
 ## 📋 Prerequisites
 
