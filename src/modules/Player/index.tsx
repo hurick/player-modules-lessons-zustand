@@ -22,7 +22,7 @@ export const Player = () => {
       <div className="flex w-6xl flex-col gap-6">
         <div className="flex items-center justify-between">
           <Header />
-          <Button lucideIconClassName="size-4" lucideIcon="MessageCircle">
+          <Button disabled={isLoading} lucideIconClassName="size-4" lucideIcon="MessageCircle">
             Feedback
           </Button>
         </div>

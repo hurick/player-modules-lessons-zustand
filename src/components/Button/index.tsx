@@ -7,6 +7,7 @@ type IButton = {
   variant?: 'solid' | 'outline'
   className?: string
   children?: ReactNode
+  disabled?: boolean
   lucideIcon?: keyof typeof lucideIcons
   lucideIconPosition?: 'left' | 'right'
   lucideIconClassName?: string
@@ -17,6 +18,7 @@ export const Button = ({
   variant = 'solid',
   className,
   children,
+  disabled,
   lucideIcon,
   lucideIconPosition = 'left',
   lucideIconClassName,
@@ -24,10 +26,10 @@ export const Button = ({
 }: IButton) => {
   const IconComponent = lucideIcon && (lucideIcons[lucideIcon] as ElementType)
 
-  const isIconLeft = IconComponent && lucideIconPosition === 'left' && <IconComponent className={lucideIconClassName} />
-  const isIconRight = IconComponent && lucideIconPosition === 'right' && (
-    <IconComponent className={lucideIconClassName} />
-  )
+  const iconLeft = IconComponent && lucideIconPosition === 'left' && <IconComponent className={lucideIconClassName} />
+  const iconRight = IconComponent && lucideIconPosition === 'right' && <IconComponent className={lucideIconClassName} />
+
+  const disabledClassName = 'opacity-50 cursor-not-allowed'
 
   const textScheme: Record<NonNullable<IButton['color']>, string> = {
     primary: 'text-blue-500',
@@ -36,9 +38,9 @@ export const Button = ({
   }
 
   const colorScheme: Record<NonNullable<IButton['color']>, string> = {
-    primary: 'bg-blue-500 hover:bg-blue-600 border-blue-500',
-    danger: 'bg-red-500 hover:bg-red-600 border-red-500',
-    success: 'bg-green-500 hover:bg-green-600 border-green-500',
+    primary: 'bg-blue-500 border-blue-500 hover:not-disabled:bg-blue-600',
+    danger: 'bg-red-500 border-red-500 hover:not-disabled:bg-red-600',
+    success: 'bg-green-500 border-green-500 hover:not-disabled:bg-green-600',
   }
 
   const variantScheme: Record<NonNullable<IButton['variant']>, string> = {
@@ -50,14 +52,13 @@ export const Button = ({
     'flex items-center rounded-sm gap-2 text-sm font-medium text-zinc-50 border px-3 py-2 cursor-pointer hover:text-zinc-50',
     colorScheme[color],
     variantScheme[variant],
-    className
+    className,
+    disabled && disabledClassName
   )
 
   return (
-    <button className={classNames} {...props}>
-      {isIconLeft}
-      {children}
-      {isIconRight}
+    <button disabled={disabled} className={classNames} {...props}>
+      {[iconLeft, children, iconRight].filter(Boolean)}
     </button>
   )
 }
