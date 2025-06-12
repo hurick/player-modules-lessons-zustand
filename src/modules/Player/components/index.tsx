@@ -6,4 +6,12 @@ import { ModuleLessons } from './ModuleLessons'
 import { YouTubePlayer } from './YouTubePlayer'
 import { YouTubePlayerSkeleton } from './YouTubePlayer/skeleton'
 
-export { Header, HeaderSkeleton, Module, ModuleLessons,ModuleSkeleton, YouTubePlayer, YouTubePlayerSkeleton }
+export {
+  Header,
+  HeaderSkeleton,
+  Module,
+  ModuleLessons,
+  ModuleSkeleton,
+  YouTubePlayer,
+  YouTubePlayerSkeleton
+}

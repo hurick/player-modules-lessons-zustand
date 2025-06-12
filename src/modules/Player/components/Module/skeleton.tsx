@@ -1,6 +1,6 @@
 export const ModuleSkeleton = () =>
-  [1, 2].map((index) => (
-    <div key={index} className="group">
+  [1, 2].map((value, index) => (
+    <div key={index + value} className="group">
       <div className="flex w-full items-center gap-3 bg-zinc-800 p-4">
         <div className="size-10 rounded-full bg-zinc-950 animate-pulse" />
 
@@ -13,8 +13,8 @@ export const ModuleSkeleton = () =>
       </div>
 
       <nav className="relative flex flex-col gap-4 p-6">
-        {[1, 2, 3].map((index) => (
-          <div key={index} className="flex items-center gap-3">
+        {[3, 4, 5].map((value, index) => (
+          <div key={index + value} className="flex items-center gap-3">
             <div className="size-4 bg-zinc-700 rounded animate-pulse" />
             <div className="h-4 w-48 bg-zinc-700 rounded animate-pulse" />
             <div className="h-3 w-12 bg-zinc-700 rounded animate-pulse ml-auto" />
