@@ -58,7 +58,9 @@ export const Button = ({
 
   return (
     <button disabled={disabled} className={classNames} {...props}>
-      {[iconLeft, children, iconRight].filter(Boolean)}
+      {iconLeft}
+      {children}
+      {iconRight}
     </button>
   )
 }
